@@ -15,9 +15,6 @@ public class NotifyActivity : WorkflowActivity<NotificationDto, object?>
     public override async Task<object?> RunAsync(WorkflowActivityContext context, NotificationDto notificationDto)
     {
         _logger.LogInformation(notificationDto.Message);
-        //string channelName = $"pizza-notifications:{notificationDto.OrderDto.OrderId}";
-        //var _channel = _realtimeClient.Channels.Get(channelName);
-        //await _channel.PublishAsync(notificationDto.OrderDto.Status.ToString(), notificationDto);
 
         await Task.CompletedTask;
         return null;

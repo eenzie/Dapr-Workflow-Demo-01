@@ -20,14 +20,12 @@ public record OrderDto(
 }
 
 public record CustomerDto(string Name, string Email);
-
 public record OrderResultDto(OrderStatusDto Status, OrderDto OrderDto, string? Message = null);
-
 public record InventoryRequestDto(OrderItemDto[] PizzasRequested);
-
 public record InventoryResultDto(bool IsSufficientInventory, OrderItemDto[] PizzasInStock);
-
 public record NotificationDto(string Message, OrderDto OrderDto);
+public record PaymentRequestDto(string RequestId, string OrderItem, int Amount, double Currency);
+
 
 [JsonConverter(typeof(JsonStringEnumConverter))]
 public enum ItemTypeDto

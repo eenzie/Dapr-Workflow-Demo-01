@@ -7,7 +7,7 @@
 
     public record OrderCreatedEvent : IntegrationEvent
     {
-        
+        // TODO: Hvad skal vi have her?
     }
 
     public record PaymentProcessedEvent : IntegrationEvent
